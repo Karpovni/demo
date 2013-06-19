@@ -1,0 +1,69 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <title>NIKITA KARPOV's WRA 210 Course Website</title>
+
+</head>
+<body>
+
+  <header>
+	  <h1>Module 10</h1>
+	  <p>Separation of Content from Presentation</p>
+  </header>
+  
+  <div role="main">
+	<p>I tried my best to separate content from presentation on the early stages of creation of my portfolio. I tried not to use “style” attribute in the HTML file at all by mentioning the design properties in the CSS stylesheet. It is really important especially on the first stages of my work because header is something that persists on every page and CSS is reusable. So, later on there will be no need to copy massive amount of code from one HTML document to the others because CSS stylesheet could be used. For example, this is how header description looks in HTML: </p>
+	<div style="background-color: #333333"<p>&lt;div  id=&quot;logo&quot;&gt;&lt;img src=&quot;http://karpovni.github.io/portfolio/images/logo-for-web.png&quot; alt=&quot;Nikita Karpov&quot;/&gt;&lt;/div&gt;</p></div>
+	<p>It is just div with id and image with its source and alternative text. And this is how its position on the page is described in CSS:<p/>
+	<div style="background-color: #333333"<p><p>&#35;logo &#123; <br>
+    margin&#58; auto&#59;<br>
+    text-align&#58; center&#59;<br>
+    margin-top&#58; 17px&#59;<br>
+    padding-top&#58; 25px&#59;<br>
+	&#125;</p></div>
+	<p>If all of these attributes were in HTML file then this part would have been bulky and should have repeated in every HTML document.</p>
+	<p>Two more tools that I found really convenient are &quot;id&quot; and &quot;class&quot;. They allowed me to use much less code rather than without them. Here is an example of their use:</p>
+				<div style="background-color: #333333"<p><p>In HTML:</p>
+				<p>&lt;div class=&quot;separator&quot; id=&quot;sep-1&quot;&gt;&lt;/div&gt;<br>
+                ...<br>
+                &lt;div class="separator" id="sep-2"&gt;&lt;/div&gt;<br>
+                ...<br>
+                &lt;div class="separator" id="sep-3"&gt;&lt;/div&gt;<br>
+                ...<br>
+                &lt;div class="separator" id="sep-4"&gt;&lt;/div&gt;</p></div>
+                <p>In CSS:</p>
+        		<div style="background-color: #333333"<p><p>.separator { <br>
+    				display: inline-block;<br>
+    				background-color: white;<br>
+    				width: 3px;<br>
+    				height: 42px; <br>
+    				margin-top: 10px;<br>
+    				position: absolute;<br>
+					}</p><
+
+<p>#sep-1 {<br>
+    margin-left: 99px;<br>
+}</p>
+<p>#sep-2 {<br>
+    margin-left: 214px;<br>
+}</p>
+<p>#sep-3 {<br>
+    margin-left: 382px;<br>
+}</p>
+<p>#sep-4 {<br>
+    margin-left: 481px;<br>
+}</p></div>
+
+<p>General properties that shall be true for each separator are located in class and additional details that calibrate its position precisely are described uniquely for each separator by application of id.</p>
+<p>Such separation of content from presentation allows to decrease the amount of code that is written and to make the actual code look not that unwieldy.</p>
+<br>	
+
+  </div>
+  
+  <footer>
+	  <p>Copyright &copy; Nikita.</p>
+  </footer>
+
+</body>
+</html>
